@@ -1,14 +1,13 @@
 ﻿namespace SWADELib
 {
-    public class SWADEAttribute
+    public class SWADEAttribute : SWADETrait
     {
-        public string Name;
-        public Die Die;
-
-        public SWADEAttribute(string name, Die die)
+        public SWADEAttribute(string name, string description, Die die, Die wildDie)
         {
             Name = name;
+            Description = description;
             Die = die;
+            WildDie = wildDie;
         }
 
         public override string ToString()
