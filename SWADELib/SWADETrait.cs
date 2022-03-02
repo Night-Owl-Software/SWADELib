@@ -13,7 +13,7 @@ namespace SWADELib
         public Die? Die { get; set; }
         public Die? WildDie { get; set; }
 
-        public int[] RollAsWildCard()
+        public int[][] RollAsWildCard()
         {
             if(Die == null)
             {
@@ -25,7 +25,7 @@ namespace SWADELib
                 throw new SWADEMissingObjectException("Trait Wild Die Object is NULL");
             }
 
-            int[] results = new int[2];
+            int[][] results = new int[2][];
             results[0] = Die.RollWithExplosions();
             results[1] = WildDie.RollWithExplosions();
             return results;
