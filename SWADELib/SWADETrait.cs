@@ -26,19 +26,19 @@ namespace SWADELib
             }
 
             int[] results = new int[2];
-            results[0] = Die.Roll();
-            results[1] = WildDie.Roll();
+            results[0] = Die.RollWithExplosions();
+            results[1] = WildDie.RollWithExplosions();
             return results;
         }
 
-        public int RollExtraAttribute()
+        public int[] RollExtraAttribute()
         {
             if (Die == null)
             {
                 throw new SWADEMissingObjectException("Trait Die Object is NULL");
             }
 
-            return Die.Roll();
+            return Die.RollWithExplosions();
         }
     }
 }

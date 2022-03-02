@@ -19,6 +19,19 @@
             return rand.Next(1, Faces + 1);
         }
 
+        public int[] RollWithExplosions()
+        {
+            List<int> rolls = new List<int>();
+
+            do
+            {
+                int roll = Roll();
+                rolls.Add(roll);
+            } while (roll == Faces);
+
+            return rolls.ToArray();
+        }
+
         public override string ToString()
         {
             return $"d{Faces}";
