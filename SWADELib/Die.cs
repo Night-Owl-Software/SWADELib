@@ -22,10 +22,11 @@
         public int[] RollWithExplosions()
         {
             List<int> rolls = new List<int>();
+            int roll = 0;
 
             do
             {
-                int roll = Roll();
+                roll = Roll();
                 rolls.Add(roll);
             } while (roll == Faces);
 
