@@ -13,7 +13,7 @@ namespace SWADELib
         public Die? Die { get; set; }
         public Die? WildDie { get; set; }
 
-        public int[] RollWildCardAttribute()
+        public int[] RollAsWildCard()
         {
             if(Die == null)
             {
@@ -31,7 +31,7 @@ namespace SWADELib
             return results;
         }
 
-        public int[] RollExtraAttribute()
+        public int[] RollAsExtra()
         {
             if (Die == null)
             {
