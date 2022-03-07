@@ -8,6 +8,7 @@ namespace SWADELib
 {
     public abstract class SWADETrait
     {
+        public Guid ID { get; set; } 
         public string Name { get; set; }
         public string Description { get; set; }
     }

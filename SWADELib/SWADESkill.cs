@@ -5,8 +5,9 @@
         public SWADEAttribute Attribute { get; set; }
         public bool IsCoreSkill { get; set; }
 
-        public SWADESkill(string name, string description, SWADEAttribute attribute, bool coreSkill)
+        public SWADESkill(Guid id, string name, string description, SWADEAttribute attribute, bool coreSkill)
         {
+            ID = id;
             Name = name;
             Description = description;
             Attribute = attribute;

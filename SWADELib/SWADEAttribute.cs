@@ -2,8 +2,9 @@
 {
     public class SWADEAttribute : SWADETrait
     {
-        public SWADEAttribute(string name, string description)
+        public SWADEAttribute(Guid id, string name, string description)
         {
+            ID = id;
             Name = name;
             Description = description;
         }
